@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Category View Controller-->
+        <!--inQProject-->
         <scene sceneID="5Fd-eO-RCc">
             <objects>
                 <tableViewController id="qHR-4v-3Ih" customClass="CategoryViewController" customModule="inQProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6vV-pS-F1e">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="6vV-pS-F1e">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6vV-pS-F1e" id="vyN-gX-My7">
@@ -32,7 +32,13 @@
                             <outlet property="delegate" destination="qHR-4v-3Ih" id="0oe-0G-0AL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="F1H-G1-nP5"/>
+                    <navigationItem key="navigationItem" title="inQProject" id="F1H-G1-nP5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ash-Cc-3gs">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="qHR-4v-3Ih" id="bTa-Fv-omv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="cOA-k8-Cts" kind="show" identifier="goToItems" id="rLV-bw-wc2"/>
                     </connections>
@@ -41,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-200" y="86"/>
         </scene>
-        <!--inQProject-->
+        <!--inCubator-->
         <scene sceneID="1pP-bf-Dcd">
             <objects>
                 <tableViewController id="cOA-k8-Cts" customClass="TodoListViewController" customModule="inQProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +78,7 @@
                             <outlet property="delegate" destination="cOA-k8-Cts" id="4lW-sD-1f8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="inQProject" id="Gte-Az-i6M">
+                    <navigationItem key="navigationItem" title="inCubator" id="Gte-Az-i6M">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YoG-CI-WOu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
