@@ -1,0 +1,6 @@
+framework module Pods_inQProject {
+  umbrella header "Pods-inQProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
