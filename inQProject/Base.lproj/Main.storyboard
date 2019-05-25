@@ -34,6 +34,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="inQProject" id="F1H-G1-nP5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ash-Cc-3gs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="qHR-4v-3Ih" id="bTa-Fv-omv"/>
                             </connections>
