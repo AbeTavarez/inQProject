@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="-200" y="86"/>
         </scene>
-        <!--inCubator-->
+        <!--inQbator-->
         <scene sceneID="1pP-bf-Dcd">
             <objects>
                 <tableViewController id="cOA-k8-Cts" customClass="TodoListViewController" customModule="inQProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="cOA-k8-Cts" id="4lW-sD-1f8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="inCubator" id="Gte-Az-i6M">
+                    <navigationItem key="navigationItem" title="inQbator" id="Gte-Az-i6M">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YoG-CI-WOu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
