@@ -18,6 +18,10 @@ class TodoListViewController: SwipeTableViewController {
     var todoItems: Results<Item>?
     let realm = try! Realm()
     
+    @IBOutlet var searchBar: UISearchBar!
+    
+    
+    
     var selectedCategory: Category? {
         didSet {
             loadItems()
@@ -31,11 +35,54 @@ class TodoListViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         tableView.separatorStyle = .none
         
+        
+        
     }
+    
+    //ViewWillApper
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        title = selectedCategory?.name
+        
+        guard let colorHex = selectedCategory?.colour  else {fatalError()}
+        
+        updateNavBAr(withHexCode: colorHex)
+    }
+    
+    
+    //ViewWillDisapper
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        updateNavBAr(withHexCode: "1D9BF6")
+        
+    }
+    
+    
+    //MARK: - Nav Bar Setup Methods
+    
+    func updateNavBAr(withHexCode colorHexCode: String) {
+        
+         guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller does not exist.")}
+        
+        guard let navBarColor = UIColor(hexString: colorHexCode) else {fatalError()}
+        
+        navBar.barTintColor = navBarColor
+        
+        navBar.tintColor = ContrastColorOf(navBarColor, returnFlat: true)
+        
+        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(navBarColor, returnFlat: true)]
+        
+        searchBar.tintColor = navBarColor
+        
+    }
+    
+    
+
     
     
 
